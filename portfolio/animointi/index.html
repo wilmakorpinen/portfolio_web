@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spritesheet animation</title>
+    <style>
+        .snake{
+            background: url(moving_snake.jpg);
+            border:1px solid red;
+            width: 250px;
+            height: 200px;
+
+            animation: walk 1s steps(4)  infinite;
+
+        }
+
+        .contains_div{
+            animation: moveCharacter 2s ease-out forwards;
+        }
+
+        @keyframes walk{
+            from{
+                background-position: 0px;
+            }
+            to{
+                background-position: -1000px;
+            }
+            @keyframes moveCharacter{
+                to{
+                    transform: translateX(500px)
+                }
+
+
+            }
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="snake">
+        <div class="contains_div">
+      </div>
+    </div>
+
+
+
+    </body>
+</html>

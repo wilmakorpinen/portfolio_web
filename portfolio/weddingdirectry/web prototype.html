@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html class=" wf-loading" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <script src="web%20prototype_tiedostot/apl6lau.js" async=""></script><script type="text/javascript" async="" src="web%20prototype_tiedostot/recaptcha__fi.js"></script><script type="text/javascript"> window.adobeid = { client_id: "CometWeb1", redirect_uri: location.href, scope: "AdobeID,openid,creative_cloud,sao.ccprivate", locale: "en-US", uses_redirect_mode: true, optimizations: { enable: true, fastEvents: true, prefetchSuSi: true }, api_parameters: { authorize: { state: {"ac": "xd.adobe.com"} } }, onAccessToken: function (token) { const tokenInfo = adobeIMS.getAccessTokenInfo(); const userProfile = adobeIMS.getUserProfile(); if (userProfile && tokenInfo) { window.signInIMSCallback && window.signInIMSCallback(userProfile.userId, userProfile.name, tokenInfo.access_token); } }, onAccessTokenHasExpired: function () { window.signOutIMSCallback && window.signOutIMSCallback(); }, onReady: function () { const tokenInfo = adobeIMS.getAccessTokenInfo(); const userProfile = adobeIMS.getUserProfile(); if (userProfile && tokenInfo) { window.signInIMSCallback && window.signInIMSCallback(userProfile.userId, userProfile.name, tokenInfo.access_token); } } }; </script> <script id="imslib" src="web%20prototype_tiedostot/imslib.js" async="" defer="defer"></script> <script src="web%20prototype_tiedostot/bundle.js" async="" defer="defer"></script> <link rel="stylesheet" href="web%20prototype_tiedostot/style.css"> <link rel="stylesheet" href="web%20prototype_tiedostot/component-styles.css"> <script src="web%20prototype_tiedostot/api.js" async="" defer="defer"></script> <title>web prototype</title> <meta name="robots" content="noindex"> <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-status-bar-style" content="black"> <meta name="format-detection" content="telephone=no"> <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no"> <!-- Prototype icon link for iOS -->  <link rel="apple-touch-icon" href="https://xd.adobe.com/images/xd_ios_webclip_192.png">  <!-- Home screen setting & prototype icon link for Android --> <meta name="mobile-web-app-capable" content="yes">  <link rel="manifest" href="https://xd.adobe.com/manifest.json">  <!-- Prototype icon link for IE -->  <link rel="shortcut icon" href="https://xd.adobe.com/images/xd_favicon.ico">  <!-- Metadata --> <!-- Twitter Metadata --> <meta name="twitter:card" content="summary"> <meta name="twitter:site" content="@AdobeXD"> <meta name="twitter:title" content="web prototype"> <meta name="twitter:description" content="A prototype made with Adobe XD"> <meta name="twitter:image:alt" content="Adobe XD">  <meta name="twitter:image" content="https://cdn.cp.adobe.io/content/2/dcx/f873328e-f393-4881-b903-af4179ee0a21/rendition/artwork/artboard-373f0c1e-809b-4d33-9d9a-2bc0044595da/graphicContent.png/version/0/format/png/dimension/longest/size/300">  <!-- Facebook Metadata --> <meta property="og:url" content="https://xd.adobe.com/view/f873328e-f393-4881-b903-af4179ee0a21"> <meta property="og:type" content="website"> <meta property="og:title" content="web prototype"> <meta property="og:site_name" content="Adobe XD"> <meta property="og:description" content="A prototype made with Adobe XD">  <meta property="og:image" content="https://cdn.cp.adobe.io/content/2/dcx/f873328e-f393-4881-b903-af4179ee0a21/rendition/artwork/artboard-373f0c1e-809b-4d33-9d9a-2bc0044595da/graphicContent.png/version/0/format/png/dimension/longest/size/300"><style type="text/css">@font-face{font-family:tk-adobe-clean-n4;src:url(https://use.typekit.net/af/1f215f/000000000000000000017701/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/1f215f/000000000000000000017701/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/1f215f/000000000000000000017701/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:tk-adobe-clean-i4;src:url(https://use.typekit.net/af/03a941/000000000000000000017702/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/03a941/000000000000000000017702/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/03a941/000000000000000000017702/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:tk-adobe-clean-n7;src:url(https://use.typekit.net/af/432f42/000000000000000000017703/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/432f42/000000000000000000017703/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/432f42/000000000000000000017703/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:tk-adobe-clean-i7;src:url(https://use.typekit.net/af/bc3d2a/000000000000000000017708/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/bc3d2a/000000000000000000017708/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/bc3d2a/000000000000000000017708/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;}</style><style type="text/css">@font-face{font-family:adobe-clean;src:url(https://use.typekit.net/af/1f215f/000000000000000000017701/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/1f215f/000000000000000000017701/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/1f215f/000000000000000000017701/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:adobe-clean;src:url(https://use.typekit.net/af/03a941/000000000000000000017702/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/03a941/000000000000000000017702/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/03a941/000000000000000000017702/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:adobe-clean;src:url(https://use.typekit.net/af/432f42/000000000000000000017703/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/432f42/000000000000000000017703/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/432f42/000000000000000000017703/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:adobe-clean;src:url(https://use.typekit.net/af/bc3d2a/000000000000000000017708/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/bc3d2a/000000000000000000017708/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/bc3d2a/000000000000000000017708/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;}</style> <style type="text/css">.desktopFooter-8OCeI {
+    width: 200px;
+}
+
+.desktopFooter-8OCeI .reportAbuse-2znOC {
+    pointer-events: auto;
+    margin-left: 24px;
+
+    font-size: 11px;
+    text-decoration: none;
+    line-height: 25px;
+
+    color: #bbb;
+    cursor: pointer;
+
+    display: -webkit-box;
+
+    display: -webkit-flex;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    white-space: nowrap;
+    border: none;
+    background: none;
+
+    padding: 0;
+}
+
+.mobileHeader-21sE6 .reportAbuse-2znOC {
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-left: 4px;
+    padding-left: 0px;
+
+    font-size: 11px;
+
+    display: -webkit-box;
+
+    display: -webkit-flex;
+
+    display: -ms-flexbox;
+
+    display: flex;
+
+    border: none;
+    background: none;
+    color: #7b7b7b;
+}
+
+.mobileDash-1kfbc {
+    float: left;
+    margin-top: 6px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.reportAbuse-2znOC:hover {
+    color: #454545;
+}
+
+.reportAbuse-2znOC:hover path {
+    fill: #454545;
+}
+
+.reportAbuseIcon-1gm8z {
+    width: 14px;
+    height: 14px;
+    float: left;
+    margin-top: 3px;
+}
+
+.mobileHeader-21sE6 .reportAbuseTitle-2vvi4 {
+    margin-top: 2px;
+}
+
+.desktopFooter-8OCeI .reportAbuseTitle-2vvi4 {
+    margin-left: 6px;
+}
+
+.reportAbuseTitle-2vvi4 {
+    /* Include adobe-clean here because text inherits font from button */
+    font-family: "adobe-clean", sans-serif;
+}
+
+.reportAbuseTitle-2vvi4:lang(ja) {
+    font-family: adobe-clean, "adobe clean", "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3",
+        "Hiragino Kaku Gothic Pro", "\30E1\30A4\30EA\30AA", Meiryo, "\FF2D\FF33   \FF30\30B4\30B7\30C3\30AF", "MS PGothic", sans-serif;
+}
+</style><style type="text/css">.titleBar-38jNf {
+    color: #000000;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-user-select: text;
+
+       -moz-user-select: text;
+
+        -ms-user-select: text;
+
+            user-select: text;
+
+    -webkit-box-pack: justify;
+
+    -webkit-justify-content: space-between;
+
+        -ms-flex-pack: justify;
+
+            justify-content: space-between;
+}
+
+/***** Desktop *****/
+.desktop-3knqI.titleBar-38jNf {
+    padding: 24px 0 0;
+    height: 72px;
+}
+
+.mobile-3qjPA.titleBar-38jNf {
+    background-color: #FFF;
+    padding: 16px 0px;
+    margin-top: 0px;
+    position: fixed;
+    z-index: 1;
+}
+
+.mobile-3qjPA.noTitleBar-x7Cic {
+    margin-top: -80px;
+    transition: margin-top 300ms ease-in;
+}
+
+/* Left block styles */
+.leftBlock-3utd_ {
+}
+
+.mobile-3qjPA .leftBlock-3utd_ {
+    padding-left: 16px;
+}
+
+.desktop-3knqI .leftBlock-3utd_ {
+    padding-left: 24px;
+}
+
+.centeredTitle-20IBa {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.prototypeIcon-1j6zk {
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+    border-radius: 9px;
+}
+
+.noPrototypeIcon-1Drja {
+    height: 48px;
+}
+
+.centeredTitle-20IBa .prototypeInfo-2oLdC {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    font-weight: normal;
+    font-size: 14px;
+    padding-right: 5px;
+}
+
+.mobile-3qjPA .prototypeName-rO5ue {
+    /* 90px = .leftBlock.padding-left:16 + prototypeIcon.width:48 & margin-right:10
+       + another 16px for padding so the text doesn't go right to the edge of the screen */
+    width: calc(100vw - 90px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dateAbuseDelete-WXpK5 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    color: #7b7b7b;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.mobile-3qjPA .dateAbuseDelete-WXpK5 {
+    margin-top: 0px;
+}
+
+.dateAbuseDeleteText-2MZCu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+}
+
+.signOutSeparator-310nk {
+    width: 12px;
+    color: #7b7b7b;
+    font-size: 11px;
+    text-align: center;
+}
+
+.signOut-2GpL- {
+    cursor: pointer;
+    color: #7b7b7b;
+    font-size: 11px;
+    border: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.signOut-2GpL-:hover {
+    color: #454545;
+}
+
+.deleteIcon-2PU_e {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    opacity: 0.5;
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPHBhdGggZmlsbD0iIzY2NiIgZD0iTTkuNSw1LjVhLjQ5Mi40OTIsMCwwLDEsLjUuNTV2NC45YS41LjUsMCwxLDEtMSwwVjYuMDVhLjQ5Mi40OTIsMCwwLDEsLjUtLjU1bS0yLDBhLjQ5Mi40OTIsMCwwLDEsLjUuNTV2NC45YS41LjUsMCwxLDEtMSwwVjYuMDVhLjQ5Mi40OTIsMCwwLDEsLjUtLjU1bS0yLDBhLjQ5Mi40OTIsMCwwLDEsLjUuNTV2NC45YS41LjUsMCwxLDEtMSwwVjYuMDVhLjQ5Mi40OTIsMCwwLDEsLjUtLjU1TTQsNGg3djlINFpNNCwxNGg3YS45ODIuOTgyLDAsMCwwLDEtLjk2VjRoLjVhLjUuNSwwLDAsMCwwLTFIMTBWMi42NGExLjg0OCwxLjg0OCwwLDAsMC0uNS0xLjE2QTEuOTkyLDEuOTkyLDAsMCwwLDguMjksMUg2LjcxYTEuOTkyLDEuOTkyLDAsMCwwLTEuMjEuNDhBMS44NDgsMS44NDgsMCwwLDAsNSwyLjY0VjNIMi41YS41LjUsMCwwLDAsMCwxSDN2OS4wNEEuOTgyLjk4MiwwLDAsMCw0LDE0Wk05LDIuNVYzSDZWMi41QS41MDguNTA4LDAsMCwxLDYuNSwyaDJhLjUwOC41MDgsMCwwLDEsLjUuNVoiLz4KPC9zdmc+Cg==);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    margin-left: 6px;
+    padding: 0;
+    border: 0;
+}
+
+.deleteIcon-2PU_e:hover, .deleteIcon-2PU_e:focus {
+    opacity: 1;
+}
+
+/* Right block styles */
+.rightBlock-poXiQ {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.fullScreenIcon-2vBPJ {
+    width: 18px;
+    height: 18px;
+
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+.fullScreenIcon-2vBPJ:hover path {
+    fill: #454545;
+}
+
+.commentsHeader-1vbGL {
+    margin-top: -24px;
+    height: 96px;
+}
+</style><style type="text/css">.header-2WtjF {
+    background: #FFFFFF;
+    width: 100%;
+
+    border-bottom: 2px solid rgb(247, 247, 247);
+
+    display: -webkit-box;
+
+    display: -webkit-flex;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    /* Needed for flexbox */
+    height: 48px;
+
+    font-size: 14px;
+}
+
+/*********************/
+/* Left block styles */
+/*********************/
+.left-3q9g8 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+
+    width: 211px;
+}
+
+.drawerButton-3uIAW {
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 24px;
+    padding: 0;
+    width: 20px;
+    height: 18px;
+}
+
+.drawerButton-3uIAW:hover path {
+    fill: #454545;
+}
+
+/***********************/
+/* Center block styles */
+/***********************/
+.title-1UZQ8 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 0;
+        -ms-flex: 1 0 0px;
+            flex: 1 0 0;
+    min-width: 10px;
+
+    color: #323232;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    margin-top: 4px;
+}
+
+.modifiedDate-26gpe {
+    color: #8E8E8E
+}
+
+
+/**********************/
+/* Right block styles */
+/**********************/
+.right-3BAYU {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+
+    width: 211px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.fullScreenIcon-1FXT5 {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.fullScreenIcon-1FXT5:hover path {
+    fill: #454545;
+}
+
+#ccxc-comments-header .loginHeader {
+    margin-top: 16px !important;
+}
+</style><style type="text/css">.pinningModeBackground-2O40X {
+    position: absolute;
+    height: 100%;
+    width: calc(100vw - 336px);
+
+    background-color: #B5B5B5;
+
+    font-weight: normal;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.escapeToCancel-3wbH8 {
+    position: absolute;
+    top: 29px;
+    right: 24px;
+}
+</style><style type="text/css">.commentsPanel-1aoED {
+    border-top: 0px solid #fafafa;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    height: 100%;
+    background-color: #FAFAFA;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text;
+
+    position: relative;
+}
+
+.commentsPanelOldHeader-3CbEg {
+    background-color: #fafafa;
+}
+
+/*
+  These CSS selectors are a bit risky to use because we're reaching down into the CCXC Commenting components to
+  change the styles and hoping that the element id's do not change in code we are not the owners of. To help
+  mitigate this risk, the CSS selectors in the selectors.js are using these same ids to identify elements in the
+  automated commenting tests. That way, if the ids do change, the problem should be caught by our automated tests.
+*/
+#ccxc-comments-list {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+    overflow: auto;
+}
+
+#ccxc-comments-submit {
+    position: inherit;
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+
+    -webkit-flex-shrink: 0;
+
+        -ms-flex-negative: 0;
+
+            flex-shrink: 0; /* Stop Safari 9 from cropping the div too small */
+}
+</style><style type="text/css">.desktopFooter-3KoiP {
+    position: fixed;
+    background-color: #FAFAFA;
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    min-height: 80px;
+
+    display: -webkit-box;
+
+    display: -webkit-flex;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+
+    z-index: 100;
+}
+
+.desktopFooterOldHeader-3B2A_ {
+    background-color: #fff;
+    height: 96px;
+}
+
+.desktopFooter-3KoiP .appInfo-3Ghoo:hover path {
+    fill: #454545;
+}
+
+.desktopFooter-3KoiP .appInfo-3Ghoo:hover .appLink-1MfGI {
+    text-decoration: none;
+    color: #454545;
+}
+
+.appInfo-3Ghoo {
+    font-size: 11px;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    white-space: nowrap;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+
+    width: 200px;
+}
+
+.ccLogo-J0aoZ {
+    /*
+        HACK: we need to hide the overflow because for some reason IE shows
+        scrollbars for... something. I'm really not sure what. @knightle
+    */
+    overflow: hidden;
+    height: 24px;
+    width: 24px;
+    background-size: 24px 24px;
+    padding-bottom: 1px;
+    padding-right: 24px;
+}
+
+.navButtons-3iZyd {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+}
+
+.appLink-1MfGI {
+    pointer-events: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-decoration: none;
+    margin-right: 8px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #bbb;
+}
+</style><style type="text/css">.navButtons-1Qqr7 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+
+    -webkit-box-align: end;
+
+    -webkit-align-items: flex-end;
+
+        -ms-flex-align: end;
+
+            align-items: flex-end;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.navButtons-1Qqr7 button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    opacity: 0.3;
+}
+
+.navButton-2FYM- button:active {
+    outline: none;
+}
+
+.navButton-2FYM- button:focus {
+    outline: 2px solid #1592E6;
+}
+
+.navButton-2FYM- button:hover {
+    opacity: 1;
+}
+
+.navButton-2FYM- button::-moz-focus-inner {
+    border: 0;
+}
+
+
+.prevIcon-1iwz7 {
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxwYXRoIGZpbGw9IiM2NjYiIGQ9Ik00LjIzLDcuNDcsOS40MSwyLjI5YS43NjcuNzY3LDAsMCwxLDEuMDcsMCwuNzU0Ljc1NCwwLDAsMSwwLDEuMDZMNS44Miw4bDQuNjYsNC42NmEuNzU0Ljc1NCwwLDAsMSwwLDEuMDYuNzY3Ljc2NywwLDAsMS0xLjA3LDBMNC4yMyw4LjUzQS43NTQuNzU0LDAsMCwxLDQuMjMsNy40N1oiLz4KPC9zdmc+Cg==);
+    background-repeat: no-repeat;
+    height: 16px;
+}
+
+.homeIcon-31-5z {
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4KICAgIDxwYXRoIGZpbGw9IiM2NjYiIGQ9Ik05LjcxLDEuMTVhMS4wMzMsMS4wMzMsMCwwLDAtMS41LDBMLjg5LDguMTlBMS4wNjUsMS4wNjUsMCwwLDAsMS42MywxMEgzdjUuNDZhLjUzNi41MzYsMCwwLDAsLjUzLjU0SDdWMTBoNHY2aDMuNDhhLjUyNy41MjcsMCwwLDAsLjUyLS41NFYxMGgxLjI1YTEuMDUxLDEuMDUxLDAsMCwwLC43OC0xLjgxWiIvPgo8L3N2Zz4K);
+    /* decimal needed to get diagonals crisp on pixel */
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 16px;
+}
+
+.nextIcon-TIOma {
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxwYXRoIGZpbGw9IiM2NjYiIGQ9Ik0xMC43ODMsNy40LDUuNiwyLjIxOGEuNzY3Ljc2NywwLDAsMC0xLjA3LDAsLjc1NC43NTQsMCwwLDAsMCwxLjA2bDQuNjYsNC42NS00LjY2LDQuNjZhLjc1NC43NTQsMCwwLDAsMCwxLjA2Ljc2Ny43NjcsMCwwLDAsMS4wNywwbDUuMTgtNS4xOUEuNzU0Ljc1NCwwLDAsMCwxMC43ODMsNy40WiIvPgo8L3N2Zz4K);
+    background-repeat: no-repeat;
+}
+
+.screenNumbers-_CcC_ {
+    padding: 0px 5px 1px;
+    color: #7b7b7b;
+    font-size: 12px;
+    line-height: 21px;
+    white-space: nowrap;
+}
+
+/***** Desktop *****/
+.navButton-2FYM- button div {
+    /* decimals needed to get diagonals crisp on pixel */
+    width: 11px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.homeButton-25MiB button {
+    /* original padding-top is 2px, so this raises the icon by 1px */
+    padding-top: 1px;
+}
+
+.homeButton-25MiB button div {
+    /* decimals needed to get diagonals crisp on pixel */
+    width: 18px;
+    height: 16px;
+    cursor: pointer;
+}
+</style><style type="text/css">.desktop-mIzBX {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    overflow: hidden;
+    background-color: #FAFAFA;
+
+    display: -webkit-box;
+
+    display: -webkit-flex;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.desktopOldHeader-2gTfL {
+    background-color: #fff;
+}
+
+.titlebarContainer-28xKL {
+    width: 100%;
+    background-color: #fff;
+}
+
+.prototypeAndComments-1zvNW {
+    width: 100%;
+    height: calc(100vh - 130px);
+
+    display: -webkit-box;
+
+    display: -webkit-flex;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+
+    -webkit-user-select: none;
+
+       -moz-user-select: none;
+
+        -ms-user-select: none;
+
+            user-select: none;
+    z-index: 2;
+}
+
+.prototypeAndCommentsOldHeader-3w_Qv {
+    height: calc(100vh - 192px);
+}
+
+.prototypeAndCommentsPinningMode-3VB0O {
+    height: 100%;
+}
+
+.prototypeAndFooterPanel-2IFPk {
+    -webkit-align-self: stretch;
+        -ms-flex-item-align: stretch;
+            align-self: stretch;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+
+    /* Width is set to 0 to allow flexbox to collapse the prototype panel, which
+    allows the comments sidebar to overlap it. This behavior is defined in
+    https://www.w3.org/TR/css-flexbox-1/#min-size-auto */
+    width: 0px;
+    /* min-width is set to 1px for Firefox. This seems like a bug in Firefox,
+    but may be something do to with an interaction between the content-size of
+    the <img> further down the DOM, and transfered-size, as also defined in the
+    above specification. */
+    min-width: 1px;
+
+    display: -webkit-box;
+
+    display: -webkit-flex;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.prototypeScrollerPanel-2L7l3 {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+
+    display: -webkit-box;
+
+    display: -webkit-flex;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    overflow: auto;
+}
+
+.commentsContainer-pVUXI {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: calc(100vh - 50px); /* Subtract prototype-header height */
+    overflow: hidden;
+    border-left: 1px solid #EFEFEF;
+}
+
+.commentsContainerOldHeader-2jxx7 {
+    height: calc(100vh - 98px); /* Subtract old titlebar height */
+    border-left: none;
+}
+
+.commentsContainerPinningMode-2An8P {
+    height: calc(100vh);
+}
+
+#ccxc-comments-list .list {
+    background-color: #FAFAFA;
+}
+</style><style type="text/css">.overlay-27WGd, .overlayOpen-2ggnf {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    /* Bring this in front of other things that have a z-index (such as the
+    comments sign in panel) */
+    z-index: 1000;
+}
+.overlayOpen-2ggnf {
+    opacity: 1;
+    transition: opacity 150ms ease-out;
+}
+.ReactModal__Overlay--after-open {
+    opacity: 1;
+    transition: opacity 150ms ease-out;
+}
+
+.ReactModal__Content {
+    -webkit-transform: scale(0.5) rotateX(-30deg);
+            transform: scale(0.5) rotateX(-30deg);
+}
+
+.ReactModal__Content--after-open {
+    -webkit-transform: scale(1) rotateX(0deg);
+            transform: scale(1) rotateX(0deg);
+    transition: all 150ms ease-in;
+}
+
+.ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+.ReactModal__Content--before-close {
+    -webkit-transform: scale(0.5) rotateX(30deg);
+            transform: scale(0.5) rotateX(30deg);
+    transition: all 150ms ease-in;
+}
+
+.ReactModal__Content.reportAbuseDialog {
+    border: none;
+    background-color: transparent;
+}
+
+.reportAbuseDialog-1StM4 {
+    width: 600px;
+    margin: auto;
+    border: 1px solid #ccc;
+    background: #fff;
+    overflow: auto;
+    padding: 10px 20px 20px 20px;
+    font-weight: 100;
+    font-size: 0.9rem;
+    color: #444444;
+}
+
+.reportAbuseDialog-1StM4 a {
+    color: #009DF5;
+    text-decoration: none;
+}
+
+.reportAbuseDialog-1StM4 a:hover {
+    color: #2A78B8;
+}
+
+.dialogTitle-2aHS1 {
+    font-size: 1.75rem;
+    line-height: 1.4;
+}
+
+.closeX-2n5YQ {
+    float: right;
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+    border: none;
+    background: 0 0;
+    cursor: default;
+}
+
+.termsOfUseMessage-1YtBZ {
+    margin: 20px 0px 20px 0px;
+    font-size: 1rem;
+}
+
+.dialogLabel-3Y8FS {
+    min-height: 15px;
+    font-weight: bold;
+}
+
+.errorLabel-r-Yb8 {
+    min-height: 15px;
+    font-weight: bold;
+    color: red;
+}
+
+.mobile-2tuQy {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+}
+
+.reportingUserInfo-3LP5o {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.reportingUserEmail-1OAJn {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 50%;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+
+    display: -webkit-box;
+
+    display: -webkit-flex;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    margin-bottom: 15px;
+    min-height: 42px;
+}
+
+.textInput-3Eo5P {
+    min-height: 13px;
+}
+
+.nameEmailSeparator-h9iTL {
+    width: 20px;
+    height: 1px;
+}
+
+.reportingUserName-1qa0n {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 50%;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+
+    display: -webkit-box;
+
+    display: -webkit-flex;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    margin-bottom: 20px;
+    min-height: 42px;
+}
+
+.reportSpecifyItem-1QArN {
+    margin-bottom: 20px;
+}
+
+.reportItems-3Oiam {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.reportItem-1tubV {
+    margin-right: 50px;
+}
+
+.reportItemCheckbox-31j1t {
+    margin-top: -1px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.reportReason-1uQse {
+    margin-bottom: 20px;
+}
+
+.reportWhyReasons-2q10t {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+}
+
+.reportWhyReason-10gyg {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 50%;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+
+    margin-bottom: 3px;
+    min-height: 17px;
+}
+
+.reportWhyReasonRadio-1AKBX {
+    margin-top: -1px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.reportDesc-23btG {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+.reportDescInput-U6krP {
+    height: 50px;
+}
+
+.copyrightMessage-nGruc {
+
+    margin-bottom: 20px;
+}
+
+.bottomButton-382TQ {
+    width: 100%;
+    font-size: 14px;
+    border: 1px solid #527593;
+    padding: 7px 30px 7px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.sendAbuseButton-1Gqps {
+
+    background-color: #247FCC;
+    background-image: linear-gradient(#50a3e2, #247fcc);
+    margin-bottom: 5px;
+    color: #FFFFFF;
+}
+
+.cancelButton-3T_fV {
+
+    background-color: #D5D5D5;
+    background-image: linear-gradient(#f1f1f1, #d5d5d5);
+    color: #000000;
+}
+</style><style type="text/css">.embed-2KRHD {
+    height: 100%;
+    width: 100%;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    overflow: auto;
+
+    display: -webkit-box;
+
+    display: -webkit-flex;
+
+    display: -ms-flexbox;
+
+    display: flex;
+}
+
+.footer-1JM24 {
+    background: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 96px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+</style><style type="text/css">.fullscreen-gEDC_ {
+    height: 100%;
+    width: 100%;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    overflow: auto;
+
+    display: -webkit-box;
+
+    display: -webkit-flex;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    background-color: white;
+    transition: background-color 1s ease;
+}
+
+.blackBackground-2Spt- {
+    background-color: black;
+}
+</style><style type="text/css">.mobile-2iCme {
+    height: 100%;
+
+    display: -webkit-box;
+
+    display: -webkit-flex;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    -webkit-user-select: none;
+
+       -moz-user-select: none;
+
+        -ms-user-select: none;
+
+            user-select: none;
+}
+
+</style><style type="text/css">.noScreensContainer-xLNS2 {
+    /* grow to fill the remaining space */
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.noScreensMessage-3mkd6 {
+    font-size: 20px;
+}
+
+.center-3Pp66 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+</style><style type="text/css">.backdrop-fNSzh {
+    height: 100%;
+    width: 100%;
+    background: #FFFFFF;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.clearBackdrop-UZpEd {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    background: none;
+}
+
+.dialogBox-2sXQN {
+    position: relative;
+    color: #000000;
+    background: #FFFFFF;
+    width: 447px;
+    min-width: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    padding: 26px 26px 0px 26px;
+    margin: 0 10px;
+}
+
+.row-3AvE8 {
+    width: 100%;
+    padding:0;
+    margin-bottom: 16px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.btnRow-1lrjb {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 6px;
+    height: 32px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+
+.lineSeparatorHorizontal-3flrQ {
+    width: 100%;
+    border-color: #e1e1e1;
+    height: 1px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    margin-bottom: 16px;
+}
+
+.lineSeparatorVertical-5Nzl1 {
+    height: 100%;
+    border-color: #e1e1e1;
+    border-left-width: 1px;
+    border-left-style: solid;
+    width: 1px;
+    margin: 0 15px;
+}
+
+.descriptionText-3DoLi {
+    width: 100%;
+    color: #2d2d2d;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    line-height: 1.5;
+}
+
+.detailDiv-2fOyv {
+    margin-bottom: 6;
+}
+
+.detailText-39ML3 {
+    width: 100%;
+    color: #4b4b4b;
+    font-size: 12px;
+    text-align: left;
+}
+
+.btn-fTWuv {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #4b4b4b;
+    font-weight: bold;
+    font-size: 12px;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+}
+
+.btn-fTWuv::-moz-focus-inner {
+    border: 0;
+}
+
+.noDisplay-3VnDW {
+    display: none;
+}
+</style><script type="text/javascript" src="web%20prototype_tiedostot/satelliteLib-ac3e97c18d4786df6c583e1544f72088e70aee2a.js"></script><style type="text/css">.hotspots-1w4bc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    cursor: default !important;
+
+    /*
+    IE10 doesn’t give completely transparent divs the correct z-order. Giving
+    the div a completely transparent background fixes this, while not affecting
+    anything visually in any browser. The "1" in the red component of rgba is
+    needed to prevent the minifier from reducing this color to "transparent",
+    which doesn't fix IE.
+     */
+    background: rgba(1, 0, 0, 0);
+
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.hotspot-iWUtj {
+    position: absolute;
+    cursor: pointer;
+
+    outline: 1px solid rgba(80, 185, 255, 0);
+    background-color: rgba(21, 146, 230, 0);
+}
+
+.highlightHotspotAnimation {
+    -webkit-animation: fadeHighlight 500ms linear 0s 1;
+            animation: fadeHighlight 500ms linear 0s 1;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+}
+
+@keyframes fadeHighlight {
+    0% {
+        outline-color: rgba(80, 185, 255, 0);
+        background-color: rgba(21, 146, 230, 0);
+    }
+
+    50% {
+        outline-color: rgba(80, 185, 255, 1);
+        background-color: rgba(21, 146, 230, 0.5);
+    }
+
+    100% {
+        outline-color: rgba(80, 185, 255, 0);
+        background-color: rgba(21, 146, 230, 0);
+    }
+}
+
+@-webkit-keyframes fadeHighlight {
+    0% {
+        outline-color: rgba(80, 185, 255, 0);
+        background-color: rgba(21, 146, 230, 0);
+    }
+
+    50% {
+        outline-color: rgba(80, 185, 255, 1);
+        background-color: rgba(21, 146, 230, 0.5);
+    }
+
+    100% {
+        outline-color: rgba(80, 185, 255, 0);
+        background-color: rgba(21, 146, 230, 0);
+    }
+}
+</style><style type="text/css">.screen-33iGw {
+    display: inline-block;
+    position: relative;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.loading-2UTaB {
+    background-color: #FFF;
+    background-image: url(/radial-lightx2-2Y5eG.gif);
+    background-size: 36px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+</style><style type="text/css">.viewerContainer-1nfw4 {
+    box-sizing: border-box;
+    position: relative;
+    background-color: black;
+    overflow: hidden;
+    margin: auto;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.viewerContainerWithBorder-2u2Kw {
+
+    border: 1px solid #E5E5E5;
+}
+
+.screenContainer-3pNJl {
+    position: absolute;
+    transform: translateZ(0);
+    -webkit-transform: none; /* No translateZ on webkit, it can cause dark lines Safari versions prior to 10.1 */
+}
+</style><link rel="prefetch" href="https://ims-na1.adobelogin.com/favicon.ico?cache_bust=d200a498fbb9b"><script src="web%20prototype_tiedostot/satellite-5642627664746d3f7d0069f2.js"></script></head><body> <div id="container"><div data-reactroot="" class="desktopOldHeader-2gTfL desktop-mIzBX"><div class="titlebarContainer-28xKL"><header class="desktop-3knqI titleBar-38jNf"><div class="leftBlock-3utd_" data-auto="leftBlock"><div class="centeredTitle-20IBa" data-auto="centeredTitle"><div class="noPrototypeIcon-1Drja"></div><div class="prototypeInfo-2oLdC" data-auto="title"><div class="prototypeName-rO5ue">web prototype</div><div class="dateAbuseDelete-WXpK5"><div class="dateAbuseDeleteText-2MZCu" data-auto="modifiedDate"><span><span>Nov 23, 2017</span><!-- react-text: 13 --> <!-- /react-text --><span>1:20 PM</span></span></div></div></div></div></div><div class="rightBlock-poXiQ"><div class="fullScreenIcon-2vBPJ" title="Fullscreen mode" data-auto="fullScreen" style="margin-right: 0px;"><i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path fill="#707070" d="M12.26,1a.251.251,0,0,0-.18.43l1.59,1.59L10.18,6.51a.254.254,0,0,0,0,.36l.96.96a.242.242,0,0,0,.35,0l3.5-3.5,1.58,1.59A.255.255,0,0,0,17,5.74V1.25A.254.254,0,0,0,16.75,1ZM5.764,17a.25.25,0,0,0,.17-.43L4.36,14.99l3.5-3.49a.274.274,0,0,0,0-.36l-.96-.96a.274.274,0,0,0-.36,0l-3.49,3.5L1.46,12.1a.25.25,0,0,0-.43.17l-.016,4.48a.261.261,0,0,0,.25.25Z"></path></svg></i></div><div class="commentsHeader-1vbGL" style="min-width: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"><div id="ccxc-comments-header" class=""><a class="actionButton" href="#" title="Show comments"><span class="commentIcon"></span></a><a href="#" class="loginHeader"><span>Sign In</span></a></div></div></div></header></div><div class="prototypeAndCommentsOldHeader-3w_Qv prototypeAndComments-1zvNW" data-auto="pinningOverlay"><div class="prototypeAndFooterPanel-2IFPk"><div class="prototypeScrollerPanel-2L7l3" data-auto="scrollableArea"><div class="viewerContainerWithBorder-2u2Kw viewerContainer-1nfw4" data-auto="viewer" style="height: 451px; min-height: 451px; width: 800px; min-width: 800px;"><div class="screenContainer-3pNJl"><div data-auto="currScreen" class="screen-33iGw" style=""><div style="overflow: hidden; width: 798px; height: 449px;"><div style="overflow: hidden; position: relative; width: 798px; height: 449px;"><img crossorigin="anonymous" src="web%20prototype_tiedostot/0.png" alt="Web 1920 – 1" style="width: 798px; height: 449px; display: block;"><span class="Tappable-inactive hotspots-1w4bc" data-auto="hotspotsDiv" style="-moz-user-select: none; cursor: pointer; width: 798px; height: 449px;"><span class="Tappable-inactive hotspot-iWUtj " style="-moz-user-select: none; cursor: pointer; z-index: 2; left: 641.488px; top: 21.6185px; width: 30.3491px; height: 12.888px;"></span><span class="Tappable-inactive hotspot-iWUtj " style="-moz-user-select: none; cursor: pointer; z-index: 0; left: 45.3157px; top: 280.209px; width: 26.1917px; height: 11.225px;"></span><span class="Tappable-inactive hotspot-iWUtj " style="-moz-user-select: none; cursor: pointer; z-index: 1; left: 125.138px; top: 280.209px; width: 34.9222px; height: 11.225px;"></span></span></div></div></div></div></div></div><div class="desktopFooterOldHeader-3B2A_ desktopFooter-3KoiP" data-auto="footer" style="width: calc(0px + 100vw);"><div class="desktopFooter-8OCeI"><button class="reportAbuse-2znOC" data-auto="reportAbuseLink"><div class="reportAbuseIcon-1gm8z"><i><svg xmlns="http://www.w3.org/2000/svg" viewBox="37 717 14.302 14.232"><path fill="#bbb" d="M37.067,718.006a.708.708,0,0,1,1.282-.6l5.978,12.819a.708.708,0,0,1-1.282.6l-5.978-12.819m6.41,6.824c-.2-.343-3.807-7.685-3.807-7.723,1.114-.121,4.078-.136,5.348.623a32.475,32.475,0,0,1,5.956.05c.415.065.432.287.069.5a36.507,36.507,0,0,0-7.566,6.55z"></path></svg></i></div><div class="reportAbuseTitle-2vvi4" data-auto="reportAbuseLinkText"><span>Report Abuse</span></div></button></div><div class="navButtons-3iZyd"><div><div><!--empty template--><div class="navButtons-1Qqr7"><div class="navButton-2FYM-"><button data-auto="prevBtn" style="outline: medium none currentcolor;"><div class="prevIcon-1iwz7"></div></button></div><div class="navButton-2FYM- homeButton-25MiB"><button data-auto="homeBtn" style="outline: medium none currentcolor;"><div class="homeIcon-31-5z"></div></button></div><div class="screenNumbers-_CcC_">1 of 4</div><div class="navButton-2FYM-"><button data-auto="nextBtn" style="outline: medium none currentcolor;"><div class="nextIcon-TIOma"></div></button></div></div></div></div></div><a class="appInfo-3Ghoo" href="http://www.adobe.com/go/get_xd" target="_blank" data-auto="cometLink"><div class="appLink-1MfGI"><div><span>Made with Adobe XD</span></div></div><div class="ccLogo-J0aoZ"><i role="img" aria-label="Creative Cloud Logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#bbb" d="M11.09,7.72a9.155,9.155,0,0,1,1.08.71,3.261,3.261,0,0,1,2.44-.82,4.443,4.443,0,0,1,4.76,4.43,4.571,4.571,0,0,1-4.76,4.6,5.012,5.012,0,0,1-3.52-1.35L8.36,12.55a.736.736,0,0,0-.91-.02.625.625,0,0,0-.01.83l2.89,2.78a6.227,6.227,0,0,0,4.29,1.78,5.935,5.935,0,0,0,5.98-5.87,5.9,5.9,0,0,0-6.02-5.77,4.979,4.979,0,0,0-3.73,1.27ZM3.4,13.17a4.848,4.848,0,0,0,4.88,4.75H9.66a2.362,2.362,0,0,1-.94-1.2l-.36-.02a3.536,3.536,0,0,1-3.63-3.57A3.181,3.181,0,0,1,8.19,9.82a3.278,3.278,0,0,1,2.4.71l2.09,2.17c.21.21.81.09,1.02-.11a.494.494,0,0,0,.01-.73L11.52,9.7A4.635,4.635,0,0,0,8.26,8.49,4.772,4.772,0,0,0,3.4,13.17ZM14.5,4a8.21,8.21,0,0,0-3.41.73A8.4,8.4,0,0,0,8.8,6.23c-.18-.01-.36-.02-.53-.02a7.277,7.277,0,0,0-2.82.56A7.4,7.4,0,0,0,3.14,8.25a7.232,7.232,0,0,0-1.56,2.24A6.791,6.791,0,0,0,1,13.24a6.914,6.914,0,0,0,.57,2.75,7.308,7.308,0,0,0,1.56,2.23,7.4,7.4,0,0,0,2.33,1.51A4.341,4.341,0,0,0,7.18,20H15a8.8,8.8,0,0,0,2.86-.37,8.416,8.416,0,0,0,2.67-1.73,8.147,8.147,0,0,0,1.8-2.58A8.6,8.6,0,0,0,23,12a7.322,7.322,0,0,0-.66-3.04,8.3,8.3,0,0,0-4.49-4.33A9.111,9.111,0,0,0,14.5,4Zm0,.8a8.154,8.154,0,0,1,3.05.58,7.761,7.761,0,0,1,2.42,1.57A7.545,7.545,0,0,1,21.6,9.28,6.476,6.476,0,0,1,22.2,12a7.783,7.783,0,0,1-.6,2.99,7.488,7.488,0,0,1-4.05,3.9A6.931,6.931,0,0,1,15,19.2H7.18a3.716,3.716,0,0,1-1.42-.21,6.635,6.635,0,0,1-2.07-1.34,6.376,6.376,0,0,1-1.38-1.98,6.02,6.02,0,0,1,0-4.85A6.4,6.4,0,0,1,3.69,8.83,6.561,6.561,0,0,1,5.75,7.5a6.693,6.693,0,0,1,2.52-.49,3.7,3.7,0,0,1,.47.02l.34.02.26-.23a7.7,7.7,0,0,1,2.07-1.35A7.393,7.393,0,0,1,14.5,4.8Z"></path></svg></i></div></a></div></div></div></div></div> <script> (function (d) { var config = { kitId: "apl6lau", classes: false, evebts: false, scriptTimeout: 3000, async: true }, h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s) })(document); window.prototypeData = {"manifest":{"id":"f873328e-f393-4881-b903-af4179ee0a21","name":"web prototype","interactions":{"id":"44ee1f2c-69ef-4232-9886-1098a657738f","path":"interactions/interactions.json","version":"0"},"artboards":[{"id":"373f0c1e-809b-4d33-9d9a-2bc0044595da","name":"Web 1920 – 1","bounds":{"width":1920,"x":121,"y":185,"height":1080},"viewport":{"height":1080,"width":1920},"component":{"id":"a75d4703-523b-4654-b26d-f1a9c2c245db","path":"artwork/artboard-373f0c1e-809b-4d33-9d9a-2bc0044595da/graphicContent.png","version":"0","rel":"rendition"}},{"id":"c6d0d52b-307c-4b0d-90f9-15fc0b2ebfcd","name":"Web 1920 – 5","bounds":{"width":1920,"x":2192,"y":185,"height":1080},"viewport":{"height":1080,"width":1920},"component":{"id":"02ab5bd9-87d2-44fe-af47-65cbbe373f74","path":"artwork/artboard-c6d0d52b-307c-4b0d-90f9-15fc0b2ebfcd/graphicContent.png","version":"0","rel":"rendition"}},{"id":"6522cb53-d51e-4027-a39f-b51c2024f6fd","name":"Web 1920 – 6","bounds":{"width":1920,"x":2192,"y":1265,"height":1080},"viewport":{"height":1080,"width":1920},"component":{"id":"6a459fff-676b-4b1c-83f3-8a2bd4c4ee79","path":"artwork/artboard-6522cb53-d51e-4027-a39f-b51c2024f6fd/graphicContent.png","version":"0","rel":"rendition"}},{"id":"adc9419c-4b60-4d61-94f3-cef84aee9be6","name":"Web 1920 – 9","bounds":{"width":1920,"x":2192,"y":2346,"height":1080},"viewport":{"height":1080,"width":1920},"component":{"id":"b241b5cb-8351-433c-9093-c0e22579ed92","path":"artwork/artboard-adc9419c-4b60-4d61-94f3-cef84aee9be6/graphicContent.png","version":"0","rel":"rendition"}}],"dcxUrl":"https://cdn.cp.adobe.io/content/2/dcx/f873328e-f393-4881-b903-af4179ee0a21/content"},"configData":{"webappContext":"web","detectedLanguage":"en","detectedLocale":"en-US","environment":"production","featureFlags":{"routing":true,"preserveScroll":true,"artboardDrawer":false,"authButton":true,"centeredHeader":false,"commenting":true,"guestCommenting":true,"annotations":true,"cp":true,"resolveComments":true,"commentsPanel":false,"fullscreenScale100":false,"userVoice":false,"blurInfo":false,"commentsPanelRedline":false,"stylesButton":false,"toastNotification":true,"NDA":true,"accessibility":false}},"linkTemplate":"https://cdn.cp.adobe.io/content/2/dcx/f873328e-f393-4881-b903-af4179ee0a21/content/{path}/version/{version}","ownerId":"948A3E77599D2A310A495C18@AdobeID","modifiedDate":1511439655145,"version":0}; window.prototypeDataLoaded && window.prototypeDataLoaded(); </script></body></html>

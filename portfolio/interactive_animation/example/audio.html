@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="">
+
+ </head>
+
+<body>
+
+
+<video preload="auto">
+                       <source src="big_buck_bunny.ogv" type="video/ogg">
+                       <source src="big_buck_bunny.mp4" type="video/mp4">
+
+</video>
+
+<audio preload="auto">
+<source src="horse.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+let vid = document.querySelector("video");
+let aud = document.querySelector("audio");
+
+    aud.play();
+    aud.addEventListener(`ended`, startVideo)
+
+    function startVideo(){
+        console.log("startVideo was called")
+        vid.play();
+
+        vid.addEventListener("ended", sayHi);
+
+    }
+
+    function sayHi(){
+    console.log("hi")
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    li {
+      background:white;
+      font-size: 3em;
+    }
+    .stuff {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+
+<body>
+ <ul>
+
+   <li>Lunch</li>
+   <li>Go home</li>
+   <li>Shop</li>
+   <li>Coffee</li>
+   <li>Sleep</li>
+   <li>DO JS</li>
+   <li>Eat</li>
+ </ul>
+
+  <script>
+  let liItems = document.querySelectorAll("li");
+    liItems.forEach(addClass);
+    function addClass(oneLi, index){
+      oneLi.addEventListener('click', listClicked);
+    }
+    function listClicked(evt){
+      console.log(evt.target);
+      evt.target.classList.toggle("stuff");
+    }
+  </script>
+
+
+
+
+
+
+
+
+</body>
+</html>
